@@ -1,4 +1,3 @@
----
 services:
   speedtest-tracker:
     image: lscr.io/linuxserver/speedtest-tracker:latest
@@ -7,7 +6,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - APP_KEY=
+      - APP_KEY=base64:NS+PfH6LxyXrltGQUK/0lR86UUxR2YLUOeBAelT+sjo=
       - APP_URL=
       - DB_CONNECTION=sqlite
       - SPEEDTEST_SCHEDULE=
@@ -22,5 +21,5 @@ services:
     volumes:
       - /mnt/MainDrive/config/speedtest/data:/config
     ports:
-      - 90:80
+      - 91:80  # Maps port 91 on the host to port 80 in the container
     restart: unless-stopped
