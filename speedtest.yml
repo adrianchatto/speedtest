@@ -19,7 +19,7 @@ services:
       - DISPLAY_TIMEZONE=Europe/London #optional
       - PRUNE_RESULTS_OLDER_THAN=0 #optional
     volumes:
-      - /mnt/MainDrive/config/speedtest/data:/config
+      - /mnt/MainDrive/Config/speedtest/data:/config
     ports:
       - 91:80  # Maps port 91 on the host to port 80 in the container
     restart: unless-stopped
