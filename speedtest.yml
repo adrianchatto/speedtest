@@ -5,9 +5,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Europe/London
       - APP_KEY=base64:NS+PfH6LxyXrltGQUK/0lR86UUxR2YLUOeBAelT+sjo=
-      - APP_URL=
+      - APP_URL=https://speed.chattoweb.net
       - DB_CONNECTION=sqlite
       - SPEEDTEST_SCHEDULE=
       - SPEEDTEST_SERVERS=
@@ -16,7 +16,7 @@ services:
       - DB_DATABASE= #optional
       - DB_USERNAME= #optional
       - DB_PASSWORD= #optional
-      - DISPLAY_TIMEZONE=Etc/UTC #optional
+      - DISPLAY_TIMEZONE=Europe/London #optional
       - PRUNE_RESULTS_OLDER_THAN=0 #optional
     volumes:
       - /mnt/MainDrive/config/speedtest/data:/config
